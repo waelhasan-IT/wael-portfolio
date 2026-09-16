@@ -55,7 +55,7 @@
     .timeline{display:grid;gap:13px}.job{display:grid;grid-template-columns:230px 1fr;gap:25px}.job-side{padding-top:2px}.job-side strong{font-size:13px}.job-side span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
     .job-main h3{font-size:18px;margin:0 0 4px}.job-main .company{color:#8fcaff;font-size:13px;font-weight:700;margin-bottom:10px}.job-main p{color:var(--muted);font-size:13px;margin:0}
     .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.cert{padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);font-size:13px;color:#dce7f7}
-    .cert small{display:block;color:#758ba9;margin-top:2px}.contact{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.contact h2{font-size:31px;margin:0 0 7px}.contact p{color:var(--muted);margin:0;max-width:680px}
+    .cert small{display:block;color:#758ba9;margin-top:2px}.cert-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.cert-link{display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border-radius:9px;border:1px solid rgba(99,179,255,.18);background:rgba(99,179,255,.07);font-size:11px;font-weight:700;color:#cfe7ff}.cert-link:hover{border-color:rgba(99,179,255,.4);transform:translateY(-1px)}.cert{display:flex;flex-direction:column;gap:9px}.cert-link{align-self:flex-start;font-size:12px;font-weight:700;color:#9bd2ff;padding:6px 9px;border:1px solid rgba(99,179,255,.2);border-radius:9px;background:rgba(99,179,255,.06)}.cert-link:hover{background:rgba(99,179,255,.12);border-color:rgba(99,179,255,.38)}.contact{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.contact h2{font-size:31px;margin:0 0 7px}.contact p{color:var(--muted);margin:0;max-width:680px}
     footer{padding:30px 0 45px;color:#7287a5;font-size:12px;text-align:center}
     @media(max-width:900px){.hero,.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:55px}.skills{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr;gap:7px}.contact{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}}
     @media(max-width:640px){header{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}h1{letter-spacing:-1.7px}.hero{padding-top:40px}.skills,.projects,.cert-grid,.metrics{grid-template-columns:1fr}.section-head h2{font-size:26px}.card{padding:20px}}
@@ -79,6 +79,7 @@
       <a class="btn primary" href="#experience">View My Experience</a>
       <a class="btn" href="#contact">Contact me</a>
       <a class="btn" href="Wael_Hasan_IT_Portfolio.pdf" download>Download CV</a>
+      <a class="btn" href="#certifications">See Certificates</a>
       <a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
     <div class="chips"><span class="chip">Windows Server</span><span class="chip">Active Directory & GPO</span><span class="chip">Hyper-V / VMware</span><span class="chip">Fortinet</span><span class="chip">Backup & DR</span><span class="chip">Google Workspace</span><span class="chip">POS & SQL Support</span></div>
@@ -136,25 +137,25 @@
 </section>
 
 <section id="certifications">
-  <div class="section-head"><div><div class="eyebrow">Learning</div><h2>Education & certifications</h2></div><p>Formal education plus vendor and technical training across support, networking, security and AI fundamentals.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Learning</div><h2>Education & Certifications</h2></div><p>Selected education and technical training across IT support, systems, networking, security and AI fundamentals. Certificate files are available to view directly.</p></div>
   <div class="card">
     <div class="cert-grid">
       <div class="cert">Bachelor of Science in Information Technology<small>Lebanese International University (LIU)</small></div>
       <div class="cert">Bachelor in Sociology & Economics (BAC II)</div>
-      <div class="cert">Cisco Certified Support Technician (CCST) IT Support 100-140<small>Cisco</small></div>
-      <div class="cert">CCNA R&S: Connecting Networks<small>Cisco Networking Academy</small></div>
-      <div class="cert">IT Essentials: PC Hardware and Software<small>Cisco Networking Academy</small></div>
-      <div class="cert">Introduction to Cybersecurity<small>Cisco Networking Academy</small></div>
-      <div class="cert">IT Customer Support Basics</div>
-      <div class="cert">Operating Systems Support</div>
-      <div class="cert">Security and Connectivity Support</div>
-      <div class="cert">Hardware and Upgrade Support</div>
-      <div class="cert">FCA — FortiGate 7.4 Operator Self-Paced<small>Fortinet</small></div>
-      <div class="cert">FALCON 100: Falcon Platform Architecture Overview<small>CrowdStrike</small></div>
-      <div class="cert">FALCON 101: Falcon Platform Essentials<small>CrowdStrike</small></div>
-      <div class="cert">FALCON 102: Falcon Platform Onboarding Configuration<small>CrowdStrike</small></div>
-      <div class="cert">Technical Support Fundamentals<small>Google</small></div>
-      <div class="cert">AI Fundamentals<small>Google</small></div>
+      <div class="cert">Cisco Certified Support Technician IT Support 100-140<small>Pearson / Coursera specialization</small><div class="cert-actions"><a class="cert-link" href="certificates/ccst-it-support-100-140.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/ccst-it-support-100-140.pdf" download="ccst-it-support-100-140.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">CCNA R&amp;S: Connecting Networks<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/ccna-connecting-networks.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/ccna-connecting-networks.pdf" download="ccna-connecting-networks.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">IT Essentials: PC Hardware and Software<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/it-essentials.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/it-essentials.pdf" download="it-essentials.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">Introduction to Cybersecurity<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/introduction-to-cybersecurity.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/introduction-to-cybersecurity.pdf" download="introduction-to-cybersecurity.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">IT Customer Support Basics<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/it-customer-support-basics.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/it-customer-support-basics.pdf" download="it-customer-support-basics.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">Operating Systems Support<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/operating-systems-support.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/operating-systems-support.pdf" download="operating-systems-support.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">Security and Connectivity Support<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/security-connectivity-support.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/security-connectivity-support.pdf" download="security-connectivity-support.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">Hardware and Upgrade Support<small>Cisco Networking Academy</small><div class="cert-actions"><a class="cert-link" href="certificates/hardware-upgrade-support.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/hardware-upgrade-support.pdf" download="hardware-upgrade-support.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">FCA — FortiGate 7.4 Operator Self-Paced<small>Fortinet Training Institute</small><div class="cert-actions"><a class="cert-link" href="certificates/fortigate-7-4-operator.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/fortigate-7-4-operator.pdf" download="fortigate-7-4-operator.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">FALCON 100: Falcon Platform Architecture Overview<small>CrowdStrike</small><div class="cert-actions"><a class="cert-link" href="certificates/crowdstrike-falcon-100.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/crowdstrike-falcon-100.pdf" download="crowdstrike-falcon-100.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">FALCON 101: Falcon Platform Essentials<small>CrowdStrike</small><div class="cert-actions"><a class="cert-link" href="certificates/crowdstrike-falcon-101.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/crowdstrike-falcon-101.pdf" download="crowdstrike-falcon-101.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">FALCON 102: Falcon Platform Onboarding Configuration<small>CrowdStrike</small><div class="cert-actions"><a class="cert-link" href="certificates/crowdstrike-falcon-102.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/crowdstrike-falcon-102.pdf" download="crowdstrike-falcon-102.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">Technical Support Fundamentals<small>Google / Coursera</small><div class="cert-actions"><a class="cert-link" href="certificates/google-technical-support-fundamentals.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/google-technical-support-fundamentals.pdf" download="google-technical-support-fundamentals.pdf">Download PDF ↓</a></div></div>
+      <div class="cert">AI Fundamentals<small>Google / Coursera</small><div class="cert-actions"><a class="cert-link" href="certificates/google-ai-fundamentals.pdf" target="_blank" rel="noopener">View Certificate ↗</a><a class="cert-link" href="certificates/google-ai-fundamentals.pdf" download="google-ai-fundamentals.pdf">Download PDF ↓</a></div></div>
     </div>
   </div>
 </section>
