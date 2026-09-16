@@ -1,474 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wael Hasan | IT Systems & Network Specialist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wael Hasan — IT Systems Administrator and Technical Support Engineer with 5+ years of experience in enterprise IT, Windows Server, Active Directory, virtualization, security, backup, cloud, POS support and infrastructure.">
+  <meta name="theme-color" content="#07111f">
+  <title>Wael Hasan | IT Systems Administrator & Technical Support Engineer</title>
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#121a2b;
-      --text:#e8eefc;
-      --muted:#9fb0d0;
-      --accent:#4da3ff;
-      --border:rgba(255,255,255,0.08);
+      --bg:#07111f;--bg2:#0a1627;--panel:#0e1b2e;--panel2:#12233a;
+      --text:#f5f8ff;--muted:#aab9cf;--accent:#63b3ff;--accent2:#7ce2c3;
+      --line:rgba(255,255,255,.09);--shadow:0 22px 60px rgba(0,0,0,.28);
+      --radius:22px;--max:1180px
     }
-
-    *{box-sizing:border-box; margin:0; padding:0;}
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #070c15 0%, #0b1220 30%, #0b1220 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a{color:var(--accent); text-decoration:none;}
-    a:hover{text-decoration:underline;}
-
-    .container{
-      width: min(1100px, 92%);
-      margin: 0 auto;
-      padding: 40px 0;
-    }
-
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      padding: 18px 20px;
-      border: 1px solid var(--border);
-      background: rgba(18,26,43,0.8);
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 16px;
-      z-index: 50;
-    }
-
-    .brand h1{font-size: 18px; letter-spacing:0.3px;}
-    .brand p{font-size: 13px; color: var(--muted);}
-
-    nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    nav a{
-      font-size: 13px;
-      color: var(--text);
-      opacity:0.9;
-      padding: 6px 10px;
-      border-radius: 10px;
-      border: 1px solid transparent;
-    }
-    nav a:hover{
-      border-color: var(--border);
-      background: rgba(255,255,255,0.05);
-    }
-
-    .hero{
-      margin-top: 30px;
-      display:grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap:20px;
-      align-items:stretch;
-    }
-
-    .card{
-      background: rgba(18,26,43,0.9);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .hero h2{
-      font-size: 34px;
-      line-height:1.2;
-      margin-bottom: 12px;
-      letter-spacing:0.4px;
-    }
-
-    .hero p{
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .btns{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 10px;
-    }
-    .btn{
-      display:inline-block;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      font-weight: 600;
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
-      transition: 0.2s ease;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, #4da3ff, #2b75ff);
-      border: none;
-    }
-    .btn:hover{transform: translateY(-1px);}
-
-    .quick-info p{
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .tags{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top: 12px;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(77,163,255,0.12);
-      border: 1px solid rgba(77,163,255,0.2);
-      color: #cfe3ff;
-    }
-
-    section{margin-top: 30px;}
-    section h3{
-      font-size: 18px;
-      margin-bottom: 12px;
-      letter-spacing:0.2px;
-    }
-    section p{color:var(--muted);}
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 14px;
-    }
-
-    .item h4{
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-    .item ul{
-      margin-top: 10px;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .projects{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 14px;
-    }
-
-    .proj-title{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:12px;
-    }
-    .pill{
-      font-size: 11px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      background: rgba(255,255,255,0.04);
-      white-space:nowrap;
-    }
-
-    footer{
-      margin-top: 40px;
-      padding: 20px;
-      text-align:center;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 950px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr;}
-      .projects{grid-template-columns:1fr;}
-      header{position:relative; top:0;}
-    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:
+      radial-gradient(circle at 85% 8%,rgba(99,179,255,.14),transparent 28rem),
+      radial-gradient(circle at 10% 28%,rgba(124,226,195,.08),transparent 24rem),
+      linear-gradient(180deg,#050b14 0%,var(--bg) 25%,#081321 100%);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),92%);margin:auto}
+    .nav-shell{position:sticky;top:14px;z-index:50;padding-top:14px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px 17px;border:1px solid var(--line);
+      border-radius:18px;background:rgba(7,17,31,.82);backdrop-filter:blur(16px);box-shadow:0 12px 35px rgba(0,0,0,.18)}
+    .brand strong{display:block;font-size:15px;letter-spacing:.2px}.brand span{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}nav a{font-size:13px;color:#dce7f7;padding:8px 10px;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06)}
+    .hero{min-height:650px;display:grid;grid-template-columns:1.35fr .65fr;gap:24px;align-items:center;padding:72px 0 48px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#bfe0ff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.4px}
+    .eyebrow:before{content:"";width:26px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-2.6px;margin:16px 0 18px;max-width:850px}
+    h1 span{background:linear-gradient(100deg,#fff 20%,#8ec9ff 68%,#89ead0);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{max-width:760px;color:var(--muted);font-size:18px;margin:0 0 25px}.actions{display:flex;gap:11px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid var(--line);
+      background:rgba(255,255,255,.045);font-size:13px;font-weight:700;transition:.2s}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(99,179,255,.38)}.btn.primary{background:linear-gradient(135deg,#388ee7,#3d78ed);border-color:transparent}
+    .hero-card,.card{border:1px solid var(--line);background:linear-gradient(160deg,rgba(18,35,58,.88),rgba(10,22,39,.88));border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{padding:25px}.profile{display:flex;align-items:center;gap:16px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+    .profile img{width:82px;height:82px;border-radius:18px;object-fit:cover;border:1px solid rgba(99,179,255,.42);background:#0a1627}
+    .profile h2{font-size:18px;margin:0 0 3px}.profile p{font-size:13px;color:var(--muted);margin:0}
+    .facts{display:grid;gap:13px;padding-top:19px}.fact small{display:block;color:#7287a5;font-size:10px;text-transform:uppercase;letter-spacing:1.1px;font-weight:800}
+    .fact span,.fact a{font-size:13px;color:#e7effb}.status{display:inline-flex!important;align-items:center;gap:7px}.status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 5px rgba(124,226,195,.08)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.chip{font-size:12px;color:#cfe2f8;padding:7px 10px;border:1px solid rgba(99,179,255,.16);background:rgba(99,179,255,.07);border-radius:999px}
+    section{padding:45px 0;scroll-margin-top:100px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}
+    .section-head h2{font-size:30px;letter-spacing:-.8px;margin:0}.section-head p{max-width:600px;color:var(--muted);font-size:14px;margin:0}
+    .card{padding:24px}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.about-copy p{color:var(--muted);margin:0}
+    .metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.metric{padding:18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .metric b{display:block;font-size:24px}.metric span{font-size:12px;color:var(--muted)}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill h3{font-size:15px;margin:0 0 12px}.skill ul,.project ul{margin:0;padding-left:18px;color:var(--muted);font-size:13px}
+    .skill li,.project li{margin:5px 0}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{position:relative;overflow:hidden}
+    .project:before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:linear-gradient(var(--accent),var(--accent2))}
+    .project-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.project h3{font-size:17px;margin:0 0 9px}.project p{color:var(--muted);font-size:13px;margin:0 0 12px}
+    .pill{white-space:nowrap;font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:#bfe0ff;padding:5px 8px;border-radius:999px;border:1px solid rgba(99,179,255,.18);background:rgba(99,179,255,.07)}
+    .timeline{display:grid;gap:13px}.job{display:grid;grid-template-columns:230px 1fr;gap:25px}.job-side{padding-top:2px}.job-side strong{font-size:13px}.job-side span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+    .job-main h3{font-size:18px;margin:0 0 4px}.job-main .company{color:#8fcaff;font-size:13px;font-weight:700;margin-bottom:10px}.job-main p{color:var(--muted);font-size:13px;margin:0}
+    .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.cert{padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);font-size:13px;color:#dce7f7}
+    .cert small{display:block;color:#758ba9;margin-top:2px}.contact{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.contact h2{font-size:31px;margin:0 0 7px}.contact p{color:var(--muted);margin:0;max-width:680px}
+    footer{padding:30px 0 45px;color:#7287a5;font-size:12px;text-align:center}
+    @media(max-width:900px){.hero,.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:55px}.skills{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr;gap:7px}.contact{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:640px){header{align-items:flex-start;flex-direction:column}nav{justify-content:flex-start}h1{letter-spacing:-1.7px}.hero{padding-top:40px}.skills,.projects,.cert-grid,.metrics{grid-template-columns:1fr}.section-head h2{font-size:26px}.card{padding:20px}}
   </style>
 </head>
-
 <body>
-  <div class="container">
+<div class="wrap nav-shell">
+<header>
+  <a class="brand" href="#"><strong>Wael Bassam Hasan</strong><span>IT Systems Administrator · Technical Support Engineer</span></a>
+  <nav><a href="#about">About</a><a href="#skills">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></nav>
+</header>
+</div>
 
-    <!-- HEADER -->
-    <header>
-      <div class="brand">
-        <h1>Wael Bassam Hasan</h1>
-        <p>IT Systems & Network Specialist</p>
-      </div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#certs">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="card">
-        <h2>Enterprise IT Support, Secure Infrastructure, Reliable Operations.</h2>
-        <p>
-          IT Systems & Network Specialist with 5+ years of experience in enterprise IT support,
-          systems administration, virtualization, network security, and cloud platforms.
-          I help maintain secure, stable, and efficient IT environments across business-critical operations.
-        </p>
-
-        <div class="btns">
-          <a class="btn primary" href="#contact">Hire / Contact</a>
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn" href="Wael_Hasan_IT_Portfolio.pdf" download>Download CV</a>
-          <a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank">LinkedIn</a>
-        </div>
-
-        <div class="tags">
-          <span class="tag">Windows Server</span>
-          <span class="tag">Active Directory</span>
-          <span class="tag">VMware & Hyper-V</span>
-          <span class="tag">Fortinet Security</span>
-          <span class="tag">Backup & DR</span>
-          <span class="tag">Google Cloud & Workspace</span>
-        </div>
-      </div>
-
-      <div class="card quick-info">
-        <h3 style="margin-bottom:10px;">Quick Info</h3>
-        <img src="profile.png" alt="Wael Hasan"
-        style="
-        width:120px;
-        height:120px;
-        border-radius:50%;
-        object-fit:cover;
-        border:3px solid #4da3ff;
-        margin-bottom:14px;
-        ">
-
-        <p><b>Location:</b> Beirut, Lebanon</p>
-        <p><b>Email:</b> <a href="mailto:wael7676@outlook.com">wael7676@outlook.com</a></p>
-        <p><b>Phone:</b> <a href="tel:+96176766279">+961 76 766279</a></p>
-        <p><b>Languages:</b> Arabic (Native), English (Fluent)</p>
-        <p><b>Focus:</b> Systems Administration, Networking, Security, Virtualization</p>
-
-        <div style="margin-top:14px;">
-          <a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank">LinkedIn</a>
-        </div>
-      </div>
+<main class="wrap">
+<section class="hero">
+  <div>
+    <div class="eyebrow">Enterprise IT · Infrastructure · Support</div>
+    <h1>Supporting Reliable <span>IT Systems & Day-to-Day Operations.</span></h1>
+    <p class="lead">IT Systems Administrator and Technical Support Engineer with 5+ years of hands-on experience supporting enterprise IT environments, systems administration, virtualization, security, backup and recovery, cloud services, POS technology, and general IT operations.</p>
+    <div class="actions">
+      <a class="btn primary" href="#experience">View My Experience</a>
+      <a class="btn" href="#contact">Contact me</a>
+      <a class="btn" href="Wael_Hasan_IT_Portfolio.pdf" download>Download CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="card">
-        <h3>About Me</h3>
-        <p>
-          I’m an IT professional with strong experience in enterprise support, systems administration,
-          network infrastructure, endpoint protection, backup management, and virtualization.
-          My background includes supporting financial and retail environments, maintaining Windows-based
-          infrastructure, managing secure remote access, and troubleshooting critical IT issues to ensure
-          business continuity and operational stability.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <h3>Skills & Tools</h3>
-      <div class="grid">
-        <div class="card item">
-          <h4>Systems & Infrastructure</h4>
-          <ul>
-            <li>Windows Server, Active Directory, DNS, DHCP, IIS</li>
-            <li>ManageEngine AD Manager, Group Policy, PAM</li>
-            <li>HPE Servers, RAID, HPE iLO</li>
-            <li>Enterprise IT support and systems administration</li>
-          </ul>
-        </div>
-
-        <div class="card item">
-          <h4>Networking & Virtualization</h4>
-          <ul>
-            <li>Fortinet firewall policies and IPsec VPN</li>
-            <li>TCP/IP, cabling, PoE, Wi-Fi and printer networking</li>
-            <li>VMware, Hyper-V, Nutanix</li>
-            <li>Cisco IP phones, Asterisk PBX, Meraki support</li>
-          </ul>
-        </div>
-
-        <div class="card item">
-          <h4>Security, Backup & Cloud</h4>
-          <ul>
-            <li>CrowdStrike EDR, BitLocker, Wazuh SIEM</li>
-            <li>Veeam, Datto, Acronis backup monitoring</li>
-            <li>Google Cloud Platform (GCP)</li>
-            <li>Google Workspace administration and policy management</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h3>Selected Projects</h3>
-      <div class="projects">
-
-        <div class="card">
-          <div class="proj-title">
-            <h4>Service Desk Setup & IT Workflow Standardization</h4>
-            <span class="pill">Operations</span>
-          </div>
-          <p style="margin-top:8px; color:var(--muted);">
-            Helped establish a structured service desk environment to improve ticket handling, escalation, and support efficiency.
-          </p>
-          <ul>
-            <li>Created issue templates and support workflows</li>
-            <li>Improved coordination using Agent Central</li>
-            <li>Supported IT policy standardization and documentation</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="proj-title">
-            <h4>Secure Remote Work Device Deployment</h4>
-            <span class="pill">Security</span>
-          </div>
-          <p style="margin-top:8px; color:var(--muted);">
-            Prepared enterprise laptops for secure remote work and controlled access to business systems.
-          </p>
-          <ul>
-            <li>Deployed CrowdStrike EDR and BitLocker encryption</li>
-            <li>Managed privileged access through PAM</li>
-            <li>Supported FortiClient VPN and OpenVPN connectivity</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="proj-title">
-            <h4>Network Security & VPN Connectivity Support</h4>
-            <span class="pill">Infrastructure</span>
-          </div>
-          <p style="margin-top:8px; color:var(--muted);">
-            Supported secure communications and network stability across enterprise environments.
-          </p>
-          <ul>
-            <li>Managed Fortinet devices and IPsec VPN tunnels</li>
-            <li>Handled network cabling, PoE, and connectivity troubleshooting</li>
-            <li>Configured printer monitoring through SNMP and SMTP alerts</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="proj-title">
-            <h4>Backup Monitoring & Disaster Recovery Support</h4>
-            <span class="pill">Continuity</span>
-          </div>
-          <p style="margin-top:8px; color:var(--muted);">
-            Supported data protection readiness by monitoring backup systems and DR infrastructure.
-          </p>
-          <ul>
-            <li>Checked and followed up on Acronis backup reports</li>
-            <li>Worked with Veeam, Datto, and Acronis solutions</li>
-            <li>Supported DR environments using VMware, Hyper-V, and Nutanix</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h3>Experience</h3>
-      <div class="grid">
-
-        <div class="card item">
-          <h4>IT Network & Support Officer — CashUnited SAL</h4>
-          <p style="margin-top:8px;">
-            Managed Windows infrastructure, enterprise support, backup systems, Fortinet VPN, Google Workspace,
-            endpoint security, virtualization, and day-to-day IT operations in a financial services environment.
-          </p>
-        </div>
-
-        <div class="card item">
-          <h4>Tier 2 Technical Support Engineer — CME (Dollar General, USA)</h4>
-          <p style="margin-top:8px;">
-            Delivered remote technical support for POS environments, Linux and Windows systems, vendor coordination,
-            network troubleshooting, SQL diagnostics, and ServiceNow-based ticket workflows.
-          </p>
-        </div>
-
-        <div class="card item">
-          <h4>IT Support / Assistant IT Manager — Baroody Group</h4>
-          <p style="margin-top:8px;">
-            Supported branch operations through system deployment, POS maintenance, virtualization, CCTV and
-            biometric systems, hardware troubleshooting, and general IT support.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certs">
-      <div class="card">
-        <h3>Education & Certifications</h3>
-        <ul style="margin-top:10px; padding-left:18px; color:var(--muted);">
-          <li>Bachelor of Science in Information Technology — Lebanese International University (LIU)</li>
-          <li>Bachelor in Sociology & Economics (BAC II)</li>
-          <li>Google Technical Support Fundamentals — Coursera</li>
-          <li>FortiGate Operator</li>
-          <li>Cisco Networking Academy: IT Essentials, Routing & Switching, Interconnecting Networks, Introduction to Cybersecurity</li>
-          <li>Google Workspace: User & Resource Management</li>
-          <li>CME Compliance Training: GDPR, Data Privacy, Information Security, CCPA, Anti-Bribery & Corruption</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="card">
-        <h3>Contact</h3>
-        <p>
-          Interested in working together or discussing opportunities?
-          Reach me at <a href="mailto:wael7676@outlook.com">wael7676@outlook.com</a>
-          or call <a href="tel:+96176766279">+961 76 766279</a>.
-        </p>
-
-        <div class="btns" style="margin-top:14px;">
-          <a class="btn primary" href="mailto:wael7676@outlook.com">Email Me</a>
-          <a class="btn" href="tel:+96176766279">Call</a>
-          <a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Wael Bassam Hasan • IT Systems & Network Specialist
-    </footer>
+    <div class="chips"><span class="chip">Windows Server</span><span class="chip">Active Directory & GPO</span><span class="chip">Hyper-V / VMware</span><span class="chip">Fortinet</span><span class="chip">Backup & DR</span><span class="chip">Google Workspace</span><span class="chip">POS & SQL Support</span></div>
   </div>
+  <aside class="hero-card">
+    <div class="profile"><img src="profile.png" alt="Portrait of Wael Hasan"><div><h2>Wael Hasan</h2><p>Beirut, Lebanon</p></div></div>
+    <div class="facts">
+      <div class="fact"><small>Role</small><span>IT Systems Administrator & Technical Support Engineer</span></div>
+      <div class="fact"><small>Experience</small><span>5+ years in IT</span></div>
+      <div class="fact"><small>Languages</small><span>Arabic · English</span></div>
+      <div class="fact"><small>Email</small><a href="mailto:wael7676@outlook.com">wael7676@outlook.com</a></div>
+      <div class="fact"><small>Phone</small><a href="tel:+96176766279">+961 76 766279</a></div>
+      <div class="fact"><small>Professional focus</small><span class="status">Systems, infrastructure & support</span></div>
+    </div>
+  </aside>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<section id="about">
+  <div class="section-head"><div><div class="eyebrow">Profile</div><h2>Practical IT experience, from user support to infrastructure.</h2></div><p>My background spans financial-services and retail environments where availability, security, documentation and responsive support matter.</p></div>
+  <div class="about-grid">
+    <div class="card about-copy"><p>I work across enterprise technical support and systems administration, including Windows Server, Active Directory, virtualization, endpoint protection, backup platforms, cloud administration and business-critical applications. My experience also includes hardware and peripheral support, printers, inventory and stock management, technical documentation, secure remote access, CCTV and biometric systems, IP telephony, and practical network troubleshooting.</p></div>
+    <div class="metrics"><div class="metric"><b>5+</b><span>Years of IT experience</span></div><div class="metric"><b>L2</b><span>Enterprise technical support</span></div><div class="metric"><b>Win/Linux</b><span>Cross-platform support</span></div><div class="metric"><b>Infra</b><span>Systems, security & continuity</span></div></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head"><div><div class="eyebrow">Expertise</div><h2>Technical Skills</h2></div><p>A balanced systems-and-support profile, with networking presented as hands-on infrastructure knowledge rather than a dedicated specialization.</p></div>
+  <div class="skills">
+    <div class="card skill"><h3>Systems Administration</h3><ul><li>Windows Server, Active Directory, Group Policy</li><li>DNS, DHCP, IIS and permissions</li><li>ManageEngine AD Manager and PAM</li><li>HPE servers, RAID and iLO</li></ul></div>
+    <div class="card skill"><h3>Virtualization & Continuity</h3><ul><li>VMware and Hyper-V</li><li>Nutanix DR environment support</li><li>Veeam, Datto and Acronis</li><li>Backup monitoring and recovery support</li></ul></div>
+    <div class="card skill"><h3>Security & Cloud</h3><ul><li>FortiGate, FortiAuthenticator, FortiClient</li><li>CrowdStrike EDR, BitLocker, Wazuh SIEM</li><li>Google Cloud Platform</li><li>Google Workspace administration</li></ul></div>
+    <div class="card skill"><h3>Networking & Telephony</h3><ul><li>TCP/IP, DNS/DHCP, VLAN and VPN fundamentals</li><li>Fortinet policies and IPsec VPN</li><li>Cisco Meraki support</li><li>Yeastar PBX, TG400, SIP trunks and IP phones</li></ul></div>
+    <div class="card skill"><h3>Technical Support</h3><ul><li>Windows and Linux troubleshooting</li><li>POS systems, Ingenico and peripherals</li><li>SQL Server / SSMS diagnostics</li><li>ServiceNow ticket workflows</li></ul></div>
+    <div class="card skill"><h3>IT Operations</h3><ul><li>IT asset, stock and inventory management</li><li>Technical documentation and procedures</li><li>Network/local/POS printers and scanners</li><li>CCTV and biometric/fingerprint systems</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Projects & operational contributions</h2></div><p>Examples that show how the tools above translate into day-to-day IT operations.</p></div>
+  <div class="projects">
+    <article class="card project"><div class="project-top"><h3>Service Desk & Workflow Standardization</h3><span class="pill">Operations</span></div><p>Helped structure support handling and improve consistency around IT workflows.</p><ul><li>Created issue templates and support workflows</li><li>Improved support coordination and escalation</li><li>Supported IT policy standardization and documentation</li></ul></article>
+    <article class="card project"><div class="project-top"><h3>Secure Remote Work Deployment</h3><span class="pill">Security</span></div><p>Prepared and secured enterprise laptops for remote access to business systems.</p><ul><li>Deployed CrowdStrike EDR and BitLocker</li><li>Supported privileged-access controls</li><li>Supported FortiClient VPN and secure connectivity</li></ul></article>
+    <article class="card project"><div class="project-top"><h3>Infrastructure & Connectivity Support</h3><span class="pill">Infrastructure</span></div><p>Supported secure connectivity, telephony and infrastructure services across the environment.</p><ul><li>Fortinet policies and IPsec VPN support</li><li>Yeastar PBX, TG400 and SIP trunk support</li><li>Printer, cabling, PoE and connectivity troubleshooting</li></ul></article>
+    <article class="card project"><div class="project-top"><h3>Backup & Disaster Recovery Support</h3><span class="pill">Continuity</span></div><p>Supported backup visibility and disaster-recovery readiness across multiple platforms.</p><ul><li>Monitored and followed up backup reports</li><li>Worked with Veeam, Datto and Acronis</li><li>Supported VMware, Hyper-V and Nutanix environments</li></ul></article>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head"><div><div class="eyebrow">Career</div><h2>Professional experience</h2></div><p>Enterprise support, infrastructure administration and hands-on IT operations.</p></div>
+  <div class="timeline">
+    <article class="card job"><div class="job-side"><strong>2024 — Present</strong><span>Beirut, Lebanon</span></div><div class="job-main"><h3>IT Network & Support Officer</h3><div class="company">CashUnited SAL</div><p>Administer Windows Server, Active Directory, DNS, DHCP and IIS; support virtualization, backups, endpoint security, Google Workspace and enterprise applications. Configure and support Fortinet connectivity and Yeastar PBX/TG400/SIP trunks. Handle IT inventory and stock tracking, technical documentation, printers/scanners and hardware peripherals as part of day-to-day IT operations.</p></div></article>
+    <article class="card job"><div class="job-side"><strong>3.5 years</strong><span>Supporting Dollar General, USA</span></div><div class="job-main"><h3>Tier 2 Technical Support Engineer</h3><div class="company">CME</div><p>Delivered remote enterprise support for retail POS environments, Windows and Linux systems, software and OS deployment, SQL diagnostics, Cisco Meraki connectivity, Ingenico payment terminals, vendor coordination and ServiceNow-based ticket workflows.</p></div></article>
+    <article class="card job"><div class="job-side"><strong>9 months</strong><span>Beirut, Lebanon</span></div><div class="job-main"><h3>IT Support / Assistant IT Manager</h3><div class="company">Baroody Group</div><p>Supported multiple branches through Windows/Linux deployment, POS maintenance, VMware/VirtualBox, SQL connectivity, CCTV surveillance, biometric/fingerprint attendance systems, PC hardware troubleshooting, assembly and structured cabling.</p></div></article>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="section-head"><div><div class="eyebrow">Learning</div><h2>Education & certifications</h2></div><p>Formal education plus vendor and technical training across support, networking, security and AI fundamentals.</p></div>
+  <div class="card">
+    <div class="cert-grid">
+      <div class="cert">Bachelor of Science in Information Technology<small>Lebanese International University (LIU)</small></div>
+      <div class="cert">Bachelor in Sociology & Economics (BAC II)</div>
+      <div class="cert">Cisco Certified Support Technician (CCST) IT Support 100-140<small>Cisco</small></div>
+      <div class="cert">CCNA R&S: Connecting Networks<small>Cisco Networking Academy</small></div>
+      <div class="cert">IT Essentials: PC Hardware and Software<small>Cisco Networking Academy</small></div>
+      <div class="cert">Introduction to Cybersecurity<small>Cisco Networking Academy</small></div>
+      <div class="cert">IT Customer Support Basics</div>
+      <div class="cert">Operating Systems Support</div>
+      <div class="cert">Security and Connectivity Support</div>
+      <div class="cert">Hardware and Upgrade Support</div>
+      <div class="cert">FCA — FortiGate 7.4 Operator Self-Paced<small>Fortinet</small></div>
+      <div class="cert">FALCON 100: Falcon Platform Architecture Overview<small>CrowdStrike</small></div>
+      <div class="cert">FALCON 101: Falcon Platform Essentials<small>CrowdStrike</small></div>
+      <div class="cert">FALCON 102: Falcon Platform Onboarding Configuration<small>CrowdStrike</small></div>
+      <div class="cert">Technical Support Fundamentals<small>Google</small></div>
+      <div class="cert">AI Fundamentals<small>Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card contact"><div><div class="eyebrow">Contact</div><h2>Let’s connect.</h2><p>For IT systems administration, infrastructure support or technical support opportunities, you can reach me directly by email, phone or LinkedIn.</p></div><div class="actions"><a class="btn primary" href="mailto:wael7676@outlook.com">Email me</a><a class="btn" href="tel:+96176766279">Call</a><a class="btn" href="https://www.linkedin.com/in/wael-hasan-b20477233" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+</section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Wael Bassam Hasan · IT Systems Administrator & Technical Support Engineer</div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
